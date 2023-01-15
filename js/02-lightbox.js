@@ -11,14 +11,8 @@ const markUp = galleryItems.reduce((acc, {preview, original, description}) => ac
 
 galleryElement.innerHTML = markUp;
 
-galleryElement.addEventListener(`click`, onClick);
-
-function onClick (evt) {
-    evt.preventDefault();
-
-    let lightbox = new SimpleLightbox('.gallery a', { 
-        captionsData: `alt`,
-        captionsPosition: `bottom`,
-        captionsDelay: 250,
+let lightbox = new SimpleLightbox('.gallery a', { 
+    captionsData: `alt`,
+    captionsPosition: `bottom`,
+    captionsDelay: 250,
 });
-}
